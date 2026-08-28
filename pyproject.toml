@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-health-auditor"
+version = "0.1.0"
+description = "Score a local git repository's portfolio health: README quality, real vs. stub code, tests, and committed-secret scanning."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Arnav Chawla" }]
+
+[project.scripts]
+repo-health = "repo_health.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["repo_health*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
