@@ -1,0 +1,5 @@
+# No third-party runtime dependencies — repo_health is stdlib-only by design
+# so it can audit a repo with nothing but a Python interpreter.
+
+# Dev/test only:
+pytest>=7.0
